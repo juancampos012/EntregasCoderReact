@@ -1,0 +1,14 @@
+.greeting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw; 
+    flex-grow: 1;  
+    white-space: pre-line;
+    margin-top: 100px;
+}
+
+.greeting h1 {
+    margin: 0;
+    text-align: center;
+}
