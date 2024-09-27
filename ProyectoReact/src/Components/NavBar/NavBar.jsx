@@ -1,5 +1,6 @@
 import * as React from 'react';
 import './NavBar.css';
+import { Link } from 'react-router-dom';
 import CarWidget from '../CarWidget/CarWidget';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -40,27 +41,27 @@ function NavBar() {
     <AppBar sx={{ width: '100%', backgroundColor: '#2E3B55' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
-            <img src={logo} alt="Logo" style={{ width: '40px', marginRight: '10px' }} /> 
-            <Typography
-              variant="h6"
-              noWrap
-              component="a"
-              href="#app-bar-with-responsive-menu"
-              sx={{
-                mr: 2,
-                display: { xs: 'none', md: 'flex' },
-                fontFamily: 'monospace',
-                fontWeight: 700,
-                letterSpacing: '.3rem',
-                color: 'inherit',
-                textDecoration: 'none',
-              }}
-            >
-              Mi Cafetal
-            </Typography>
-          </Box>
-
+          <Link to="/">
+            <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
+              <img src={logo} alt="Logo" style={{ width: '40px', marginRight: '10px' }} />
+              <Typography
+                variant="h6"
+                noWrap
+                component="div" 
+                sx={{
+                  mr: 2,
+                  display: { xs: 'none', md: 'flex' },
+                  fontFamily: 'monospace',
+                  fontWeight: 700,
+                  letterSpacing: '.3rem',
+                  color: 'white',
+                  textDecoration: 'none',
+                }}
+              >
+                Mi Cafetal
+              </Typography>
+            </Box>
+          </Link>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent: 'flex-end' }}>
             <IconButton
               size="large"
